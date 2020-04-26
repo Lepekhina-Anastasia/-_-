@@ -1,0 +1,72 @@
+salary = hourly_wag * has_worked;
+        if (experience <= 1)
+            premy = 0 * salary;
+        if (experience <= 3)
+            premy = salary * 5 / 100;
+        if (experience <= 5)
+            premy = salary * 8 / 100;
+        if (experience > 5)
+            premy = salary * 8 / 100#include <iostream>
+
+using namespace std;
+
+class Worker {
+private:
+    string
+        name;
+    int
+        experience,
+        hourly_wag,
+        has_worked,
+        salary,
+        premy;
+public:
+    Worker(string name1, int experience1, int hourly_wag1, int has_worked1)
+    {
+        name = name1;
+        experience = experience1;
+        hourly_wag = hourly_wag1;
+        has_worked = has_worked1;
+        
+    }
+   
+    void message() {
+        salary = hourly_wag * has_worked;
+        if (experience <= 1)
+            premy = 0 * salary;
+        if (experience <= 3)
+            premy = salary * 5 / 100;
+        if (experience <= 5)
+            premy = salary * 8 / 100;
+        if (experience > 5)
+            premy = salary * 8 / 100;
+        cout << name;
+        cout << "\nExperience is "<< experience;
+        cout << "\nHourly wag is "<<hourly_wag;
+        cout << name << "has worked " << has_worked;
+        cout << "\nSalary is " << salary;
+        cout << "\nPremy is "<< premy;
+        
+    }
+};
+int main(int argc, char* argv[])
+{
+    string
+        name;
+    int
+        experience,
+        hourly_wag,
+        has_worked,
+        salary,
+        premy;
+    cout << "Enter worker's name "; cin >> name;
+    cout << "Enter worker's experience "; cin >> experience;
+    cout << "Enter worker's hourly wag "; cin >> hourly_wag;
+    cout << "Enter how much" << name << " has worked "; cin >> has_worked; 
+        Worker objWorker(name, experience,hourly_wag, has_worked);
+        //objWorker.get_exp();
+        //cout << experience;
+        objWorker.message();
+    system("pause");
+    return 0;
+}
